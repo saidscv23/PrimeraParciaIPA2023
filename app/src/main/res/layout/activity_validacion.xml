@@ -167,8 +167,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="56dp"
         android:text="Regresar" />
 
     <EditText
