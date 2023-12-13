@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("marca", marca);
                     intent.putExtra("tipoVehiculo", tipoVehiculo);
                     intent.putExtra("valorVehiculo", valorVehiculo);
+                    
                     intent.putExtra("multas", multas);
 
                     startActivity(intent);
