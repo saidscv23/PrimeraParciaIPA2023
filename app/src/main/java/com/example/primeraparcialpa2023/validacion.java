@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class validacion extends AppCompatActivity {
-
     EditText txtRenovacion, txtContaminacion, txtMatriculacion, txtMultas, txtTotalMatricula;
 
     @Override
@@ -24,18 +23,16 @@ public class validacion extends AppCompatActivity {
         txtMultas = findViewById(R.id.txt_pagomultas);
         txtTotalMatricula = findViewById(R.id.txt_toalmatricula);
 
-
         Intent intent = getIntent();
         String numeroCedula = intent.getStringExtra("numeroCedula");
         String nombre = intent.getStringExtra("nombre");
         String numeroPlaca = intent.getStringExtra("numeroPlaca");
         String anioFabricacion = intent.getStringExtra("anioFabricacion");
-        String marca = intent.getStringExtra("marca");
+        String color = intent.getStringExtra("color");
         String tipoVehiculo = intent.getStringExtra("tipoVehiculo");
         String valorVehiculo = intent.getStringExtra("valorVehiculo");
         String multas = intent.getStringExtra("multas");
-
-
+        String marca = intent.getStringExtra("marca");
 
         TextView txtNombre = findViewById(R.id.txt_nombreCliente);
         TextView txtCedula = findViewById(R.id.txt_cedula33);
@@ -88,7 +85,6 @@ public class validacion extends AppCompatActivity {
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 finish();
             }
         });
