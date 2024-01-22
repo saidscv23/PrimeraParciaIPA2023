@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Obtener referencias de los elementos de la interfaz
         button = findViewById(R.id.button);
         txt_numeroCedula = findViewById(R.id.txt_numeroCedula);
         txt_nombrepropietario = findViewById(R.id.txt_nombrepropietario);
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         marca = findViewById(R.id.marca);
         color = findViewById(R.id.color);
 
-        // Oculta los campos al inicio
         ocultarCampos();
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -90,12 +88,10 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("multas", multasText);
                     startActivity(intent);
                 } else {
-                    // Manejar el caso donde los campos están vacíos
                 }
             }
         });
 
-        // Agregar TextWatcher a cada EditText
         txt_numeroCedula.addTextChangedListener(new CustomTextWatcher());
         txt_nombrepropietario.addTextChangedListener(new CustomTextWatcher());
         txt_numeroPlaca.addTextChangedListener(new CustomTextWatcher());
@@ -130,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ocultarCampos() {
-        // Oculta los EditText
         txt_numeroCedula.setVisibility(View.GONE);
         txt_nombrepropietario.setVisibility(View.GONE);
         txt_numeroPlaca.setVisibility(View.GONE);
@@ -141,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         txt_multas.setVisibility(View.GONE);
         radioGroupMarca.setVisibility(View.GONE);
 
-        // Oculta los TextView
         tipoVehiculo.setVisibility(View.GONE);
         valorVehiculo.setVisibility(View.GONE);
         multas.setVisibility(View.GONE);
@@ -218,13 +212,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int calculateProgress() {
-        // Contar la cantidad de EditText llenados
         int filledEditTextCount = 0;
 
-        // Contar la cantidad total de EditText
-        int totalEditTextCount = 8;  // Ajusta esto según la cantidad total de EditText en tu diseño
+        int totalEditTextCount = 8;
 
-        // Verificar cada EditText y contar los llenados
         if (!txt_numeroCedula.getText().toString().isEmpty()) filledEditTextCount++;
         if (!txt_nombrepropietario.getText().toString().isEmpty()) filledEditTextCount++;
         if (!txt_numeroPlaca.getText().toString().isEmpty()) filledEditTextCount++;
